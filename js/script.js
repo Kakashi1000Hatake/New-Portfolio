@@ -45,27 +45,3 @@ prev.addEventListener("click", function () {
   let items = document.querySelectorAll(".item");
   document.querySelector(".slide").prepend(items[items.length - 1]);
 });
-
-// Skills Progress
-
-let progressbar = document.querySelectorAll(".circular-progress");
-
-let valueContainer = document.querySelectorAll(".value-container");
-
-let progressValue = 0;
-let progressEndValue = 65;
-let speed = 10;
-
-let progress = setInterval(() => {
-  progressValue++;
-
-  valueContainer[0].textContent = `${progressValue}%`;
-  progressbar[0].style.background = `conic-gradient(#4d5bf9 ${
-    progressValue * 3.6
-  }deg, #cadcff ${progressValue * 3.6}deg )`;
-  if (progressValue == progressEndValue) {
-    clearInterval(progress);
-  }
-}, speed);
-
-
