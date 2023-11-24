@@ -438,8 +438,7 @@ body {
 
 @media screen and (max-width: 650px) {
   .skill-container {
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     padding: 2rem 50px;
   }
 }
-
