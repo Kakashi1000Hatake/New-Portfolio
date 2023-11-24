@@ -1,3 +1,5 @@
+var tl = gsap.timeline();
+
 // Sticky nav bar
 const landing = document.querySelector(".landing");
 const toTop = document.querySelector(".to-Top");
@@ -31,6 +33,16 @@ changestylesheet.addEventListener("click", () => {
   }
 });
 
+// Auto typer
+
+// for auto typing
+var typed = new Typed(".autoType", {
+  strings: ["Web Developer", "Sleeping","Playing","Doing Noting"],
+  typeSpeed: 150,
+  backSpeed: 150,
+  loop: true,
+});
+
 // project slider
 
 let next = document.querySelector(".next");
@@ -44,4 +56,18 @@ next.addEventListener("click", function () {
 prev.addEventListener("click", function () {
   let items = document.querySelectorAll(".item");
   document.querySelector(".slide").prepend(items[items.length - 1]);
+});
+
+tl.from(".show .back", {
+  opacity: 0,
+  scale: 0,
+  duration: 0.7,
+  stagger: 0.3,
+});
+
+tl.to(".show .back", {
+  y: -30,
+  duration: 0.5,
+  repeat: 5,
+  yoyo: true,
 });

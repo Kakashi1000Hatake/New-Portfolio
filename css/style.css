@@ -9,12 +9,18 @@
   --bxbg: #b1c9ef;
   --nvbr: #d5deef;
   --bg: #f0f3fa;
+  --drkfnt: #006da4;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*::selection{
+  color: var(--bg);
+  background-color: var(--fnt);
 }
 
 html,
@@ -145,6 +151,13 @@ body {
 .txt h1:hover {
   color: var(--sptxt);
   -webkit-text-stroke: 0px var(--sptxt);
+}
+
+.txt h4{
+  padding-left: 5px;
+  padding-top: 10px;
+  font-size: 20px;
+
 }
 
 /* About */
@@ -374,6 +387,7 @@ body {
 }
 
 .skill-Title {
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   /* justify-content:center ; */
@@ -433,6 +447,22 @@ body {
   width: 60px;
   z-index: 5;
 }
+
+
+/* Footer */
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: var(--nvbr);
+  color: var(--sptxt);
+}
+
+
+
+/* Responsive */
 
 @media screen and (max-width: 990px) {
   .skill-container {
