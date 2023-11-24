@@ -76,16 +76,21 @@ body {
 
 /* Sticky nav bar */
 
-/* .sticky header {
+.sticky header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
   background-color: var(--nvbr);
+  backdrop-filter: blur(5px);
   padding: 0;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
-} */
+  box-shadow: 0 0 2rem 0 rgba(255, 255, 255, 0.2);
+  opacity: 0.5;
+}
+.sticky header:hover {
+  opacity: 1;
+}
 
 #navigation nav ul {
   display: inline-flex;
