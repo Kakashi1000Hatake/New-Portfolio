@@ -2,7 +2,6 @@ var tl = gsap.timeline();
 
 // Sticky nav bar
 const landing = document.querySelector(".landing");
-const toTop = document.querySelector(".to-Top");
 const observer = new IntersectionObserver(
   (entries) => {
     const ent = entries[0];
@@ -17,6 +16,15 @@ const observer = new IntersectionObserver(
   }
 );
 observer.observe(landing);
+
+// responsive Nav Bar
+
+let hamburger = document.querySelector(".hamburger");
+let navbar = document.querySelector("#navigation nav");
+
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+});
 
 // Light and dark mode
 
@@ -37,7 +45,7 @@ changestylesheet.addEventListener("click", () => {
 
 // for auto typing
 var typed = new Typed(".autoType", {
-  strings: ["Web Developer", "Sleeping","Playing","Doing Noting"],
+  strings: ["Web Developer", "Sleeping", "Playing", "Doing Noting"],
   typeSpeed: 150,
   backSpeed: 150,
   loop: true,
@@ -70,4 +78,18 @@ tl.to(".show .back", {
   duration: 0.5,
   repeat: 5,
   yoyo: true,
+});
+
+// Contact Form Pop Up
+
+let popbtn = document.querySelector(".popBtn");
+let popUp = document.querySelector(".popup");
+let close = document.querySelector(".close");
+
+popbtn.addEventListener("click", () => {
+  popUp.classList.add("openPop");
+});
+
+close.addEventListener("click", () => {
+  popUp.classList.remove("openPop");
 });

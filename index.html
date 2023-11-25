@@ -25,13 +25,16 @@
 
     <header id="navigation">
       <div class="logo"><h1>Harsh</h1></div>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <nav>
         <ul>
           <li><a href="#home" id="navlinks">Home</a></li>
           <li><a href="#about" id="navlinks">About</a></li>
           <li><a href="#projects" id="navlinks">Projects</a></li>
           <li><a href="#skill" id="navlinks">Skills</a></li>
-          <li><a href="" id="navlinks">Contact Us</a></li>
+          <li><a href="#contact" class="popBtn" id="navlinks">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -248,9 +251,25 @@
       </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Contact US -->
 
-    <footer>
+    <div class="section contact">
+      <div class="popup">
+        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+        <form action="" autocomplete="off">
+          <h3 class="highlight-Txt">Contact Us</h3><br>
+          
+          <input type="text" name="name" class="inputs" id="" placeholder="Full Name" autofocus required>
+          <input type="email" name="email" class="inputs" id="" placeholder="E-Mail" required>
+          <input type="text" name="number" class="inputs" id="" placeholder="Contact Number" required>
+          <textarea name="message" class="inputs message" id="" style="resize: none; height: fit-content" required cols="" rows="" placeholder="Your Message here"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+<!-- Footer -->
+      <footer>
       <h4>Copyright &#xa9 2023 by Harsh Lakhanpal | All Rights Reserved</h4>
     </footer>
 
