@@ -136,6 +136,10 @@ body {
   width: 100%;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* landing Section */
 
 .landing {
