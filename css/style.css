@@ -46,7 +46,7 @@ body {
 }
 
 .show {
-  z-index: 99999;
+  z-index: 8;
 }
 
 .light-mode {
@@ -67,6 +67,19 @@ body {
 
 .light-mode i {
   cursor: pointer;
+}
+
+
+/* Preloader */
+
+.preloader{
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg) url(../Videos/Clips/chopper.gif) no-repeat center center;
+  background-size: 50%;
+  z-index: 100;
+  position: fixed;
+  transition: 1s;
 }
 
 /* Navigation */
@@ -91,7 +104,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 8;
   background-color: var(--nvbr);
   backdrop-filter: blur(5px);
   padding: 0;

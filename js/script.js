@@ -1,5 +1,15 @@
 var tl = gsap.timeline();
 
+
+// Preloader
+
+let loader = document.querySelector(".preloader");
+
+
+window.addEventListener("load",()=>{
+  loader.style.display="none";
+})
+
 // Sticky nav bar
 const landing = document.querySelector(".landing");
 const observer = new IntersectionObserver(
