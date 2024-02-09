@@ -12,7 +12,6 @@
     />
   </head>
   <body class="sticky">
-
     <!-- Pre loader -->
 
     <div class="preloader"></div>
@@ -20,7 +19,8 @@
     <!-- side buttons -->
 
     <div class="light-mode show">
-      <a href="#home" class="to-Top"><i class="fa-solid fa-angles-up back"></i></a
+      <a href="#home" class="to-Top"
+        ><i class="fa-solid fa-angles-up back"></i></a
       ><br />
       <i class="fa-solid fa-toggle-on" id="mode"></i>
     </div>
@@ -38,7 +38,9 @@
           <li><a href="#about" id="navlinks">About</a></li>
           <li><a href="#projects" id="navlinks">Projects</a></li>
           <li><a href="#skill" id="navlinks">Skills</a></li>
-          <li><a href="#contact" class="popBtn" id="navlinks">Contact Us</a></li>
+          <li>
+            <a href="#contact" class="popBtn" id="navlinks">Contact Us</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -51,7 +53,7 @@
           Harsh <br />
           Lakhanpal
         </h1>
-        <h4> I'm <span class="autoType"></span></h4>
+        <h4>I'm <span class="autoType"></span></h4>
       </div>
     </div>
 
@@ -260,28 +262,59 @@
     <div class="section contact">
       <div class="popup">
         <div class="close"><i class="fa-solid fa-xmark"></i></div>
-        <form action="" autocomplete="off">
-          <h3 class="highlight-Txt">Contact Us</h3><br>
-          
-          <input type="text" name="name" class="inputs" id="" placeholder="Full Name" autofocus required>
-          <input type="email" name="email" class="inputs" id="" placeholder="E-Mail" required>
-          <input type="text" name="number" class="inputs" id="" placeholder="Contact Number" required>
-          <textarea name="message" class="inputs message" id="" style="resize: none; height: fit-content" required cols="" rows="" placeholder="Your Message here"></textarea>
+        <form autocomplete="off" class="form">
+          <h3 class="highlight-Txt">Contact Us</h3>
+          <br />
+
+          <input
+            type="text"
+            name="name"
+            class="inputs"
+            id="name"
+            placeholder="Full Name"
+            autofocus
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            class="inputs"
+            id="email"
+            placeholder="E-Mail"
+            required
+          />
+          <input
+            type="text"
+            name="number"
+            class="inputs"
+            id="number"
+            placeholder="Contact Number"
+            required
+          />
+          <textarea
+            name="message"
+            class="inputs message"
+            id="message"
+            style="resize: none; height: fit-content"
+            required
+            cols=""
+            rows=""
+            placeholder="Your Message here"
+          ></textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>
     </div>
 
-<!-- Footer -->
-      <footer>
-      <h4>Copyright &#xa9 2023 by Harsh Lakhanpal | All Rights Reserved</h4>
+    <!-- Footer -->
+    <footer>
+      <h4>Copyright 2023 by Harsh Lakhanpal | All Rights Reserved</h4>
     </footer>
-
   </body>
 
   <!-- Gsap -->
 
-<script
+  <script
     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
     integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
     crossorigin="anonymous"
@@ -290,6 +323,9 @@
 
   <!-- Type JS -->
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- SMTP JS -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <!-- Local Script -->
   <script src="./js/script.js"></script>

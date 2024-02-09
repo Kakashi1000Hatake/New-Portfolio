@@ -1,14 +1,12 @@
 var tl = gsap.timeline();
 
-
 // Preloader
 
 let loader = document.querySelector(".preloader");
 
-
-window.addEventListener("load",()=>{
-  loader.style.display="none";
-})
+window.addEventListener("load", () => {
+  loader.style.display = "none";
+});
 
 // Sticky nav bar
 const landing = document.querySelector(".landing");
@@ -102,4 +100,33 @@ popbtn.addEventListener("click", () => {
 
 close.addEventListener("click", () => {
   popUp.classList.remove("openPop");
+});
+
+// Contact us form submit
+
+const form = document.querySelector(".form");
+
+function feedback() {
+  const name = document.querySelector("#name");
+  const mail = document.querySelector("#email");
+  const number = document.querySelector("#number");
+  const msg = document.querySelector("#message");
+
+  const bodyMsg = `Full Name : ${name.value}, <br/> Email : ${mail.value}, <br/> Number : ${number.value}, <br/> Message : ${msg.value}`;
+
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "harshsipehp@gmail.com",
+    Password: "9972A0BF74B1A7E0ED9CAD1644C7E320BF96",
+    To: "harshsipehp@gmail.com",
+    From: "harshsipehp@gmail.com",
+    Subject: "Portfolio Feedback",
+    Body: bodyMsg,
+  }).then((message) => alert("Thank You For The Feedback"));
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  feedback();
 });
